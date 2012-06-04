@@ -45,3 +45,19 @@ CKEDITOR.editorConfig = function( config )
 * test/dummy/public/assets/ckeditor/config.js is FIRST.
 
 Use the later for now, until I figure out a better way to dynamically add it.
+
+
+## Implemented Features
+
+* Can browse sections in sitemap
+* List Pages in the Sitemap
+* Click to link to page (Link is wrong though)
+
+## Needed Features
+
+* Make link to page work
+* Can have one tree at a time right now (My Site)
+* Tree returns just pages, not files or images (should probably return documents and images if requested)
+* File Details:
+** Implement mtime
+** Implement date

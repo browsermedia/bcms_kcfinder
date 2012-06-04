@@ -10,7 +10,7 @@
       browser.version = "2.51";
       browser.support.chromeFrame = false;
       browser.support.zip = true;
-      browser.support.check4Update = true;
+      browser.support.check4Update = false;
       browser.lang = "en";
       browser.type = "files";
       browser.theme = "oxygen";
@@ -21,8 +21,9 @@
       browser.opener.CKEditor = {};
       browser.opener.CKEditor.funcNum = 2;
       browser.cms = "";
-      _.kuki.domain = "";  // Unsure if these are necessary. They only see to break setting cookies correctly. (i.e. localhost)
-      _.kuki.path = "";    // Unsure if these are necessary. They only see to break setting cookies correctly. (i.e. /)
+      // Custom settings for cookies
+      _.kuki.domain = "";  // Unsure if these are necessary. Setting only seems to break setting cookies correctly. (i.e. localhost)
+      _.kuki.path = "";    // Unsure if these are necessary. Setting only seems to break setting cookies correctly. (i.e. /)
       _.kuki.prefix = "KCFINDER_";
       $(document).ready(function () {
           browser.resize();

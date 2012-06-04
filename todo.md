@@ -37,3 +37,11 @@ CKEDITOR.editorConfig = function( config )
     config.pasteFromWordPromptCleanup = true;
     config.pasteFromWordRemoveFontStyles = true;
 };
+
+## Asset Pipeline load order:
+
+* Key file is /assets/ckeditor/config.js which is used to configure and load the ckeditor
+* bcms_kcfinder/assets/ckeditor/config.js is not first used (it loads from cms gem)
+* test/dummy/public/assets/ckeditor/config.js is FIRST.
+
+Use the later for now, until I figure out a better way to dynamically add it.

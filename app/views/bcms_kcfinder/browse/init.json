@@ -1,0 +1,226 @@
+{"tree":{
+    "name":"files",
+    "readable":true,
+    "writable":false,
+    "removable":false,
+    "hasDirs":true,
+    "dirs":[
+        {
+            "name":"public",
+            "readable":true,
+            "writable":true,
+            "removable":false,
+            "hasDirs":true,
+            "current":true,
+            "dirs":[
+                {
+                    "name":"test",
+                    "readable":true,
+                    "writable":true,
+                    "removable":true,
+                    "hasDirs":true
+                },
+                {
+                    "name":"\u4e2d\u6587",
+                    "readable":true,
+                    "writable":true,
+                    "removable":true,
+                    "hasDirs":false
+                }
+            ]
+        }
+    ]
+}, "files":[
+    {
+        "name":"09D-Canadian-Rockies-Columbia-Icefields-(Lebaran-Period).PDF",
+        "size":95763,
+        "mtime":1338607220,
+        "date":"06\/02\/2012 03:20 AM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":false,
+        "smallThumb":false
+    },
+    {
+        "name":"_htaccess",
+        "size":3,
+        "mtime":1338381035,
+        "date":"05\/30\/2012 12:30 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":false,
+        "smallIcon":false,
+        "thumb":false,
+        "smallThumb":false
+    },
+    {
+        "name":"CITRA.docx",
+        "size":13472,
+        "mtime":1338783703,
+        "date":"06\/04\/2012 04:21 AM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":false,
+        "smallThumb":false
+    },
+    {
+        "name":"Copie de Tulips\u00e9.jpg",
+        "size":100605,
+        "mtime":1338829227,
+        "date":"06\/04\/2012 05:00 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"Desert.jpg",
+        "size":127778,
+        "mtime":1338829227,
+        "date":"06\/04\/2012 05:00 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"front+back.jpg",
+        "size":100153,
+        "mtime":1338715373,
+        "date":"06\/03\/2012 09:22 AM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"front.jpg",
+        "size":91134,
+        "mtime":1338715336,
+        "date":"06\/03\/2012 09:22 AM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"google-chrome-incognito.png",
+        "size":22784,
+        "mtime":1338538627,
+        "date":"06\/01\/2012 08:17 AM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"iconos.rar",
+        "size":7635,
+        "mtime":1338407466,
+        "date":"05\/30\/2012 07:51 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":false,
+        "smallThumb":false
+    },
+    {
+        "name":"j0445014.30184.jpg",
+        "size":37720,
+        "mtime":1338725230,
+        "date":"06\/03\/2012 12:07 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"Jellyfish.jpg",
+        "size":75141,
+        "mtime":1338829227,
+        "date":"06\/04\/2012 05:00 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"Screen Shot 2012-05-14 at 9.39.01 PM.png",
+        "size":136853,
+        "mtime":1338572666,
+        "date":"06\/01\/2012 05:44 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"Screen Shot 2012-05-14 at 9.39.14 PM.png",
+        "size":135196,
+        "mtime":1338572666,
+        "date":"06\/01\/2012 05:44 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"Screen Shot 2012-05-16 at 9.39.29 PM.png",
+        "size":81489,
+        "mtime":1338572666,
+        "date":"06\/01\/2012 05:44 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    },
+    {
+        "name":"test.txt",
+        "size":4,
+        "mtime":1338492001,
+        "date":"05\/31\/2012 07:20 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":false,
+        "smallThumb":false
+    },
+    {
+        "name":"test01.jpg",
+        "size":150942,
+        "mtime":1338479254,
+        "date":"05\/31\/2012 03:47 PM",
+        "readable":true,
+        "writable":true,
+        "bigIcon":true,
+        "smallIcon":true,
+        "thumb":true,
+        "smallThumb":false
+    }
+], "dirWritable":true}

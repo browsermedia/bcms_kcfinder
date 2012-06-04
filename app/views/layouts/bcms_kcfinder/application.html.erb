@@ -2,9 +2,35 @@
 <html>
 <head>
   <title>BcmsKcfinder</title>
-  <%= stylesheet_link_tag    "bcms_kcfinder/application", :media => "all" %>
+  <%= stylesheet_link_tag "bcms_kcfinder/application", :media => "all" %>
   <%= javascript_include_tag "bcms_kcfinder/application" %>
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+      browser.version = "2.51";
+      browser.support.chromeFrame = false;
+      browser.support.zip = true;
+      browser.support.check4Update = true;
+      browser.lang = "en";
+      browser.type = "files";
+      browser.theme = "oxygen";
+      browser.access = {"files":{"upload":true, "delete":true, "copy":true, "move":true, "rename":true}, "dirs":{"create":true, "delete":true, "rename":true}};
+      browser.dir = "files/public";
+      browser.uploadURL = "http://localhost:3000/upload";
+      browser.thumbsURL = browser.uploadURL + "/.thumbs";
+      browser.opener.CKEditor = {};
+      browser.opener.CKEditor.funcNum = 2;
+      browser.cms = "";
+      _.kuki.domain = "";  // Unsure if these are necessary. They only see to break setting cookies correctly. (i.e. localhost)
+      _.kuki.path = "";    // Unsure if these are necessary. They only see to break setting cookies correctly. (i.e. /)
+      _.kuki.prefix = "KCFINDER_";
+      $(document).ready(function () {
+          browser.resize();
+          browser.init();
+          $('#all').css('visibility', 'visible');
+      });
+      $(window).resize(browser.resize);
+  </script>
 </head>
 <body>
 

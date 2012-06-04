@@ -38,6 +38,7 @@ module BcmsKcfinder
         {
             name: file.name,
             size: file.file_size,
+            path: file.path,
             mtime: 1338607220,
             date: "06\/02\/2012 03:20 AM",
             readable: true,

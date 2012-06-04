@@ -11,6 +11,10 @@
   *      @link http://kcfinder.sunhater.com
   */
 
+// This file has been modified from the original KCFinder project to add new functionality
+// Including:
+//  1. Per file paths
+
 browser.initFiles = function() {
     $(document).unbind('keydown');
     $(document).keydown(function(e) {
@@ -152,11 +156,25 @@ browser.selectAll = function(e) {
     return true;
 };
 
+// Determine the URL or Path to a given file
+// @param [String | Object] file A string or JSON object representing a file
+browser.fileUrl = function(file){
+    console.log("Path is:" + file.data('path'));
+    var fileURL = "";
+    if(file.substr){
+        fileURL = file
+    } else if(file.data('path') != undefined){
+        fileURL = file.data('path');
+    }else{
+        fileURL = browser.uploadURL + '/' + browser.dir + '/' + file.data('name');
+    }
+    fileURL = _.escapeDirs(fileURL);
+    return fileURL;
+
+}
 browser.returnFile = function(file) {
 
-    var fileURL = file.substr
-        ? file : browser.uploadURL + '/' + browser.dir + '/' + file.data('name');
-    fileURL = _.escapeDirs(fileURL);
+    var fileURL = browser.fileUrl(file);
 
     if (this.opener.CKEditor) {
         this.opener.CKEditor.object.tools.callFunction(this.opener.CKEditor.funcNum, fileURL, '');

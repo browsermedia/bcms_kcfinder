@@ -18,7 +18,6 @@
 //= require kcfinder/js/browser/0bject
 //= require kcfinder/js/browser/clipboard
 //= require kcfinder/js/browser/dropUpload
-//= require kcfinder/js/browser/files
 //= require kcfinder/js/browser/folders
 //= require kcfinder/js/browser/init
 //= require kcfinder/js/browser/misc

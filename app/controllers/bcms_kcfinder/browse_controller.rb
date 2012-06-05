@@ -4,6 +4,7 @@ module BcmsKcfinder
   class BrowseController < ApplicationController
 
     before_filter :set_default_type
+    before_filter :determine_current_section, :only=>[:init, :upload, :change_dir]
 
     def index
     end
@@ -14,26 +15,66 @@ module BcmsKcfinder
       @section = Cms::Section.find_by_name_path("/")
       render :json => {tree: {name: "My Site",
                               readable: true,
-                              writable: false,
+                              writable: true,
                               removable: false,
+                              current: true,
                               hasDirs: !@section.child_sections.empty?,
                               dirs: child_sections_to_dirs(@section)},
-                       files: list_files()}.to_json
+                       files: list_files(),
+                       dirWritable: true}.to_json
     end
 
+    def upload
+      content_block = case params[:type].downcase
+        when "files"
+          create_new(Cms::FileBlock)
+        when "images"
+          create_new(Cms::ImageBlock)
+      end
+      render :text => content_block.path
+    end
+
+    #  def handle_file_browser_upload
+    #
+    #  rescue Exception => e
+    #    logger.error(e)
+    #    result = "1,'#{escape_javascript(e.message)}'"
+    #  end
+    #
+    #  render_response("0")
+    #end
+
+    def create_new(klass)
+      uploaded_file = params[:upload].first
+      f = klass.new(:name => uploaded_file.original_filename, :publish_on_save => true)
+      a = f.attachments.build(:parent => @section,
+                              :data_file_path => uploaded_file.original_filename,
+                              :attachment_name => 'file',
+                              :data => uploaded_file)
+      f.save!
+      f
+    end
 
     # Change to a directory and return the files for that directory
     def change_dir
-      normalized_dir_name = params[:dir].gsub("My Site", "/")
-      @section = Cms::Section.find_by_name_path(normalized_dir_name)
-      render :json => {files: list_files()}.to_json
+      render :json => {files: list_files(), dirWritable: true}.to_json
     end
+
+
 
     def command
       raise "Error: The command '#{params[:command]}' is not implemented yet."
     end
 
     private
+
+    def determine_current_section
+      unless params[:dir]
+        params[:dir] = "My Site"
+      end
+      normalized_dir_name = params[:dir].gsub("My Site", "/")
+      @section = Cms::Section.find_by_name_path(normalized_dir_name)
+    end
 
     def set_default_type
       unless params[:type]

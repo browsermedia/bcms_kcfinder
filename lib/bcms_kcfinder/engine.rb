@@ -10,28 +10,43 @@ module BcmsKcfinder
       Cms::Section.send(:include, BcmsKcfinder::FinderExtension)
       Cms::Attachment.send(:include, BcmsKcfinder::Attachment::Linkable)
       Cms::Page.send(:include, BcmsKcfinder::Page::Linkable)
+      Cms::ImageBlock.send(:include, BcmsKcfinder::Image::Linkable)
 
     end
   end
 end
 
-
+# Decorate core CMS classes so they all response to same methods for generating JSON API.
 module BcmsKcfinder
   module Page
     module Linkable
       def link_to_path
         path
       end
+
+      def size_in_bytes
+        0
+      end
     end
   end
+  module Image
+    module Linkable
+      def link_to_path
+        path
+      end
 
+      def size_in_bytes
+        file.size
+      end
+    end
+  end
   module Attachment
     module Linkable
       def name
         self.data_file_name
       end
 
-      def file_size
+      def size_in_bytes
         data_file_size
       end
 

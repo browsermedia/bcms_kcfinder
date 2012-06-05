@@ -52,14 +52,15 @@ Use the later for now, until I figure out a better way to dynamically add it.
 * Add link works for both pages and files. They have been unified into a single site tree, which will show all pages and files.
 * Can browse sections in sitemap
 * Users can select a page or file and link to it.
+* Users can browse for images and add them.
 
 ## Needed Features
 
-* Select image
 * Upload image/file
 * Make large and small thumbnail icons work for:
  * pages
  * images
+* Make configuration of ckeditor and kcfinder dynamic
 * File Details:
 ** Implement mtime
 ** Implement date

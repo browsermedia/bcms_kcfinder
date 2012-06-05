@@ -22,7 +22,7 @@ CKEDITOR.config.toolbar = 'CMS';
 // Add KCFinder
 CKEDITOR.editorConfig = function(config) {
    config.filebrowserBrowseUrl = '/bcms_kcfinder/browse';
-   config.filebrowserImageBrowseUrl = '/assets/kcfinder/browse.php?type=images';
+   config.filebrowserImageBrowseUrl = '/bcms_kcfinder/browse?type=images';
    config.filebrowserFlashBrowseUrl = '/assets/kcfinder/browse.php?type=flash';
    config.filebrowserUploadUrl = '/assets/kcfinder/upload.php?type=files';
    config.filebrowserImageUploadUrl = '/assets/kcfinder/upload.php?type=images';

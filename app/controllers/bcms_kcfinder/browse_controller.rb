@@ -3,6 +3,8 @@ require_dependency "bcms_kcfinder/application_controller"
 module BcmsKcfinder
   class BrowseController < ApplicationController
 
+    before_filter :set_default_type
+
     def index
     end
 
@@ -20,7 +22,6 @@ module BcmsKcfinder
     end
 
 
-
     # Change to a directory and return the files for that directory
     def change_dir
       normalized_dir_name = params[:dir].gsub("My Site", "/")
@@ -34,15 +35,29 @@ module BcmsKcfinder
 
     private
 
-    def list_files
-      show_files(@section.linkable_children)
+    def set_default_type
+      unless params[:type]
+        params[:type] = "files"
+      end
     end
 
-    def show_files(files)
+    def list_files
+      show = case params[:type]
+               when "files"
+                 @section.linkable_children
+               when "images"
+                 Cms::ImageBlock.by_section(@section)
+               else
+                 []
+             end
+      render_files(show)
+    end
+
+    def render_files(files)
       files.map do |file|
         {
             name: file.name,
-            size: file.file_size,
+            size: file.size_in_bytes,
             path: file.link_to_path,
             mtime: 1338607220,
             date: "06\/02\/2012 03:20 AM",

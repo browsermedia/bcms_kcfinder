@@ -7,12 +7,16 @@
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
+      // Request specific
+      browser.type = '<%= params[:type] %>';
+
+      // Global config
+
       browser.version = "2.51";
       browser.support.chromeFrame = false;
       browser.support.zip = true;
       browser.support.check4Update = false;
       browser.lang = "en";
-      browser.type = "files";
       browser.theme = "oxygen";
       browser.access = {"files":{"upload":true, "delete":true, "copy":true, "move":true, "rename":true}, "dirs":{"create":true, "delete":true, "rename":true}};
       browser.dir = "browser_dir";

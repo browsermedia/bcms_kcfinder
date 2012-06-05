@@ -49,15 +49,17 @@ Use the later for now, until I figure out a better way to dynamically add it.
 
 ## Implemented Features
 
+* Add link works for both pages and files. They have been unified into a single site tree, which will show all pages and files.
 * Can browse sections in sitemap
-* List Pages in the Sitemap
-* Click to link to page (Link is wrong though)
+* Users can select a page or file and link to it.
 
 ## Needed Features
 
-* Make link to page work
-* Can have one tree at a time right now (My Site)
-* Tree returns just pages, not files or images (should probably return documents and images if requested)
+* Select image
+* Upload image/file
+* Make large and small thumbnail icons work for:
+ * pages
+ * images
 * File Details:
 ** Implement mtime
 ** Implement date

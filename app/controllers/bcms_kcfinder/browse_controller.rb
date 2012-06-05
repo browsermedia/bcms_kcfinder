@@ -16,15 +16,16 @@ module BcmsKcfinder
                               removable: false,
                               hasDirs: !@section.child_sections.empty?,
                               dirs: child_sections_to_dirs(@section)},
-                       files: show_files(@section.pages)}.to_json
+                       files: list_files()}.to_json
     end
+
 
 
     # Change to a directory and return the files for that directory
     def change_dir
       normalized_dir_name = params[:dir].gsub("My Site", "/")
       @section = Cms::Section.find_by_name_path(normalized_dir_name)
-      render :json => {files: show_files(@section.pages)}.to_json
+      render :json => {files: list_files()}.to_json
     end
 
     def command
@@ -33,12 +34,16 @@ module BcmsKcfinder
 
     private
 
+    def list_files
+      show_files(@section.linkable_children)
+    end
+
     def show_files(files)
       files.map do |file|
         {
             name: file.name,
             size: file.file_size,
-            path: file.path,
+            path: file.link_to_path,
             mtime: 1338607220,
             date: "06\/02\/2012 03:20 AM",
             readable: true,

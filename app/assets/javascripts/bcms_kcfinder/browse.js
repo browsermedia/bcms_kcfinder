@@ -14,3 +14,19 @@ browser.fileUrl = function(file){
     return fileURL;
 
 }
+
+browser.smallIconFor = function(icon){
+    return browser.iconFor('small', icon);
+}
+
+browser.bigIconFor = function(icon){
+    return browser.iconFor('big', icon);
+}
+browser.iconFor = function(size, icon){
+    // For missing extensions (i.e. CMS Pages), use the .html icon
+    if(icon == "."){
+        icon = "html";
+    }
+    return '/assets/kcfinder/themes/' + browser.theme + '/img/files/'+ size +'/' + icon + '.png';
+
+}

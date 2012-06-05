@@ -53,13 +53,12 @@ Use the later for now, until I figure out a better way to dynamically add it.
 * Can browse sections in sitemap
 * Users can select a page or file and link to it.
 * Users can browse for images and add them.
+* Icons work for most common types.
 
 ## Needed Features
 
 * Upload image/file
-* Make large and small thumbnail icons work for:
- * pages
- * images
+* Unknown extensions return 404s (i.e. CSV, etc)
 * Make configuration of ckeditor and kcfinder dynamic
 * File Details:
 ** Implement mtime

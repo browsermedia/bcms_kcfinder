@@ -51,6 +51,7 @@ browser.initFiles = function() {
     this.statusDir();
 };
 
+// @fork - Look up the icon using the asset pipeline
 browser.showFiles = function(callBack, selected) {
     this.fadeFiles();
     setTimeout(function() {
@@ -68,7 +69,7 @@ browser.showFiles = function(callBack, selected) {
                     icon = '.image';
                 else if (!icon.length || !file.smallIcon)
                     icon = '.';
-                icon = 'themes/' + browser.theme + '/img/files/small/' + icon + '.png';
+                icon = browser.smallIconFor(icon);
                 html += '<tr class="file">' +
                     '<td class="name" style="background-image:url(' + icon + ')">' + _.htmlData(file.name) + '</td>' +
                     '<td class="time">' + file.date + '</td>' +
@@ -84,7 +85,7 @@ browser.showFiles = function(callBack, selected) {
                 } else {
                     var icon = file.bigIcon ? _.getFileExtension(file.name) : '.';
                     if (!icon.length) icon = '.';
-                    icon = 'themes/' + browser.theme + '/img/files/big/' + icon + '.png';
+                    icon = browser.bigIconFor(icon);
                 }
                 html += '<div class="file">' +
                     '<div class="thumb" style="background-image:url(\'' + icon + '\')" ></div>' +

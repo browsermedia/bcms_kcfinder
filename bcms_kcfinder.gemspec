@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.files -= Dir['lib/tasks/module_tasks.rake']
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "browsercms", "~> 3.5.0"
+  s.add_dependency "browsercms", "~> 3.5.2"
 
 end

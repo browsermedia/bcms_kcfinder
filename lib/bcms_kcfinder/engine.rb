@@ -13,6 +13,10 @@ module BcmsKcfinder
       Cms::ImageBlock.send(:include, BcmsKcfinder::Image::Linkable)
 
     end
+
+    initializer 'bcms_kcfinder.enable' do |app|
+       app.config.cms.ckeditor.configuration_file = "bcms_kcfinder/config"
+    end
   end
 end
 

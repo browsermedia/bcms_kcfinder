@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bcms_kcfinder (0.0.1)
+    bcms_kcfinder (1.0.0)
       browsercms (~> 3.5.2)
 
 GEM

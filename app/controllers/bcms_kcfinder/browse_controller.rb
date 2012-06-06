@@ -34,16 +34,6 @@ module BcmsKcfinder
       render :text => content_block.path
     end
 
-    #  def handle_file_browser_upload
-    #
-    #  rescue Exception => e
-    #    logger.error(e)
-    #    result = "1,'#{escape_javascript(e.message)}'"
-    #  end
-    #
-    #  render_response("0")
-    #end
-
     def create_new(klass)
       uploaded_file = params[:upload].first
       f = klass.new(:name => uploaded_file.original_filename, :publish_on_save => true)

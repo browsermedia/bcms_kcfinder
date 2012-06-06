@@ -54,10 +54,11 @@ Use the later for now, until I figure out a better way to dynamically add it.
 * Users can select a page or file and link to it.
 * Users can browse for images and add them.
 * Icons work for most common types.
+* Can upload and link to files
+* Can upload and link to images
 
 ## Needed Features
 
-* Upload image/file
 * Unknown extensions return 404s (i.e. CSV, etc)
 * Make configuration of ckeditor and kcfinder dynamic
 * File Details:

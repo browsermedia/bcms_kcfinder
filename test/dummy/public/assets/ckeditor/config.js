@@ -16,15 +16,14 @@ CKEDITOR.config.toolbar_CMSForms = [
 
 CKEDITOR.config.width = 598;
 CKEDITOR.config.height = 400;
-
 CKEDITOR.config.toolbar = 'CMS';
 
 // Add KCFinder
 CKEDITOR.editorConfig = function(config) {
    config.filebrowserBrowseUrl = '/bcms_kcfinder/browse';
    config.filebrowserImageBrowseUrl = '/bcms_kcfinder/browse?type=images';
-   config.filebrowserFlashBrowseUrl = '/assets/kcfinder/browse.php?type=flash';
-   config.filebrowserUploadUrl = '/assets/kcfinder/upload.php?type=files';
-   config.filebrowserImageUploadUrl = '/assets/kcfinder/upload.php?type=images';
-   config.filebrowserFlashUploadUrl = '/assets/kcfinder/upload.php?type=flash';
+//   config.filebrowserFlashBrowseUrl = '/assets/kcfinder/browse.php?type=flash';
+//   config.filebrowserUploadUrl = '/assets/kcfinder/upload.php?type=files';
+//   config.filebrowserImageUploadUrl = '/assets/kcfinder/upload.php?type=images';
+//   config.filebrowserFlashUploadUrl = '/assets/kcfinder/upload.php?type=flash';
 };

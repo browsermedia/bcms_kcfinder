@@ -16,8 +16,8 @@ class BcmsKcfinder::InstallGenerator < Cms::ModuleInstallation
   #  append_to_file "db/seeds.rb", "load File.expand_path('../bcms_kcfinder.seeds.rb', __FILE__)\n"
   #end
   
-  #def add_routes
-  #  mount_engine(BcmsKcfinder)
-  #end
+  def add_routes
+    mount_engine(BcmsKcfinder)
+  end
     
 end

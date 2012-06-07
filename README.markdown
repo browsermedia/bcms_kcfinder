@@ -38,10 +38,10 @@ For the purposes of integration, all PHP code has been removed leaving only clie
 
 Things remaining to be implemented:
 
-* Add security to browse (only content editors, require permissions to upload to that section)
 * File Details:
 ** Implement mtime
 ** Implement date
 * Unknown extensions return 404s (i.e. CSV, etc)
+* Remove all UI i18n since it was implemented in PHP and the CMS itself isn't i18n yet.
 
 

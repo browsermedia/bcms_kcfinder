@@ -1,8 +1,7 @@
-require_dependency "bcms_kcfinder/application_controller"
-
 module BcmsKcfinder
-  class BrowseController < ApplicationController
+  class BrowseController < Cms::BaseController
 
+    layout 'bcms_kcfinder/application'
     before_filter :set_default_type
     before_filter :determine_current_section, :only=>[:init, :upload, :change_dir]
 

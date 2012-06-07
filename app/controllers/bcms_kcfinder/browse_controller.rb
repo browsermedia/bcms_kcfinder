@@ -1,6 +1,9 @@
 module BcmsKcfinder
   class BrowseController < Cms::BaseController
 
+    # This API is mostly JSON, so CSRF shouldn't be an issue.
+    protect_from_forgery :except => :upload
+    
     layout 'bcms_kcfinder/application'
     before_filter :set_default_type
     before_filter :determine_current_section, :only=>[:init, :upload, :change_dir]

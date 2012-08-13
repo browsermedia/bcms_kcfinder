@@ -34,6 +34,16 @@ For the purposes of integration, all PHP code has been removed leaving only clie
 * js
 * themes
 
+## Troubleshooting
+
+If you have issues after installing this gem (i.e. the browse button doesn't appear), take the following steps.
+
+```
+$ rake tmp:clear
+```
+
+This will clear the local asset pipeline cache, which is necessary if you had cached/generated JS configuration files that used the stock ckeditor config.
+
 ## TODO
 
 Things remaining to be implemented:

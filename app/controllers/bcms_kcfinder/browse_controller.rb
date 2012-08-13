@@ -14,8 +14,10 @@ module BcmsKcfinder
     # At the start, the entire Sitemap tree has to be defined, though pages below the top level do not need to be included until a 'chDir'
     # command is issued.
     def init
+      logger.warn "Use the right root section"
+      @root_section = Cms::Section.root.first
       @section = Cms::Section.find_by_name_path("/")
-      render :json => {tree: {name: "My Site",
+      render :json => {tree: {name: @root_section.name,
                               readable: true,
                               writable: true,
                               removable: false,
@@ -89,7 +91,10 @@ module BcmsKcfinder
     def render_files(files)
       files.map do |file|
         {
-            name: file.name,
+            # Handle having a possibly 'null' data_file_name, which might happen if upgrades aren't successful.
+            # Otherwise, the UI can't sort items correctly
+            name: file.name ? file.name : "",
+            
             size: file.size_in_bytes,
             path: file.link_to_path,
             mtime: file.updated_at.to_i,
@@ -99,7 +104,8 @@ module BcmsKcfinder
             bigIcon: true,
             smallIcon: true,
             thumb: false,
-            smallThumb: false
+            smallThumb: false,
+            cms_id: file.id
         }
       end
     end

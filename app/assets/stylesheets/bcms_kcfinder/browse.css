@@ -141,7 +141,7 @@ tr.file>td.time, tr.file>td.size {
     position: absolute;
     overflow: hidden;
     opacity: 0;
-    filter: alpha(opacity:0)
+    filter: alpha(opacity=0)
 }
 
 #upload input {
@@ -169,7 +169,7 @@ span.brace.opened, span.brace.closed {
     background: #000;
     z-index: 100;
     opacity: 0.7;
-    filter: alpha(opacity:50)
+    filter: alpha(opacity=50)
 }
 
 #dialog, #clipboard, #alert {
@@ -231,5 +231,5 @@ span.brace.opened, span.brace.closed {
     top: 0;
     background: #000;
     opacity: 0;
-    filter: alpha(opacity:0)
+    filter: alpha(opacity=0)
 }

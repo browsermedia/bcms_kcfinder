@@ -1,6 +1,7 @@
 // Don't require_tree because some files in this directory need to be loaded by CKEditor directly.
 //
 //= require jquery
+//= require jquery-migrate
 //= require jquery_ujs
 //= require kcfinder/js/helper
 //= require kcfinder/js/jquery.drag

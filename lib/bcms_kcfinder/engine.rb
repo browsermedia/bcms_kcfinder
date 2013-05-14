@@ -1,4 +1,5 @@
 require 'browsercms'
+require 'jquery-migrate-rails'
 
 module BcmsKcfinder
   class Engine < ::Rails::Engine

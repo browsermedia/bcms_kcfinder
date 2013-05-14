@@ -44,6 +44,10 @@ $ rake tmp:clear
 
 This will clear the local asset pipeline cache, which is necessary if you had cached/generated JS configuration files that used the stock ckeditor config.
 
+## Jquery versions
+
+This has been updated to work with JQuery 1.9.1 and later, which removed several features this module was depending on. The fix was to add jquery-migrate-rails. This may cause issues if you are using an earlier version of jquery.
+
 ## TODO
 
 Things remaining to be implemented:

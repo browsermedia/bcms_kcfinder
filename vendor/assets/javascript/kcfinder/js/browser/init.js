@@ -129,7 +129,7 @@ browser.initResizer = function() {
     var cursor = ($.browser.opera) ? 'move' : 'col-resize';
     $('#resizer').css('cursor', cursor);
     $('#resizer').drag('start', function() {
-        $(this).css({opacity:'0.4', filter:'alpha(opacity:40)'});
+        $(this).css({opacity:'0.4', filter:'alpha(opacity=40)'});
         $('#all').css('cursor', cursor);
     });
     $('#resizer').drag(function(e) {
@@ -140,7 +140,7 @@ browser.initResizer = function() {
 		$(this).css('left', left);
 	});
 	var end = function() {
-        $(this).css({opacity:'0', filter:'alpha(opacity:0)'});
+        $(this).css({opacity:'0', filter:'alpha(opacity=0)'});
         $('#all').css('cursor', '');
         var left = _.nopx($(this).css('left')) + _.nopx($(this).css('width'));
         var right = $(window).width() - left;

@@ -409,7 +409,7 @@ tr.selected:hover > td {
 a.denied {
     color: #666;
     opacity: 0.5;
-    filter: alpha(opacity:50);
+    filter: alpha(opacity=50);
     cursor: default;
 }
 
